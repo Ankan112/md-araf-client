@@ -1,0 +1,44 @@
+[
+    {
+        "ServiceName": "Wedding Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 120,
+        "rating": 4.6,
+        "description": "Wedding photography is important because it will capture your day, it will capture your memories, it will tell a story, and not just any story, it will tell a beautiful story of your special day, a day you will never forget."
+    },
+    {
+        "ServiceName": "Fashion Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 140,
+        "rating": 4.5,
+        "description": "Fashion photography focuses on the display of fashion clothing and items. It is most common on advertising boards and in fashion magazines. The photography will usually feature models wearing the display items. Fashion photography has existed almost as long as photography itself has been around."
+    },
+    {
+        "ServiceName": "Birth Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 90,
+        "rating": 4.7,
+        "description": "when you celebrate your birthday, it helps you make not only memories but also feel the sheer excitement you used to have when you were a kid. With a photoshoot of a party with your photographer, you may have a fun-filled day without having to throw an extravagant party."
+    },
+    {
+        "ServiceName": "Jewelery Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 110,
+        "rating": 4.4,
+        "description": "If you consistently post high-quality pictures of your jewelry online, you will start to register in the mind of your viewers as a professional brand worth checking out. Images are worth a thousand words, and high-quality images of your jewelry can speak to your customers more than any product description can"
+    },
+    {
+        "ServiceName": "Food Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 100,
+        "rating": 4.2,
+        "description": "With food photography you want viewers to instantly think (or better yet say) YUM! This will spark a reaction with customers, encouraging them to place an order, book a table or cook up a recipe."
+    },
+    {
+        "ServiceName": "Drink Photography",
+        "img": "https://i.ibb.co/5xjvY7W/pack6.jpg",
+        "price": 125,
+        "rating": 4.4,
+        "description": "With drink photography you want viewers to instantly think (or better yet say) YUM! This will spark a reaction with customers, encouraging them to place an order, book a table or cook up a recipe."
+    }
+]
