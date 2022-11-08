@@ -1,19 +1,60 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import loginImg from '../../img/login.jpg'
 import google from '../../img/google.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Context/UserContext';
+import toast from 'react-hot-toast';
+import { GoogleAuthProvider } from "firebase/auth";
+
+const provider = new GoogleAuthProvider();
 
 const Register = () => {
 
+    const { user, googleSignIn, createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    console.log(user)
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         const name = form.name.value;
-        const photoURL = form.photoURL.value;
+        const url = form.photoURL.value;
         form.reset();
-        console.log(name, photoURL, email, password)
+        console.log(name, url, email, password)
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast.success('Registaion Successful')
+                handleUpdateUserProfile(name, url)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    }
+    const handleUpdateUserProfile = (name, url) => {
+        const profile = {
+            displayName: name,
+            photoURL: url
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+    const handleGoogle = () => {
+        googleSignIn(provider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
 
     return (
@@ -56,7 +97,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-active">Register</button>
                             </div>
-                            <button className="btn btn-outline "><img className='h-8 w-8' src={google} alt="" />   <span className='pl-2'>Sign In With Google</span></button>
+                            <button onClick={handleGoogle} className="btn btn-outline "><img className='h-8 w-8' src={google} alt="" />   <span className='pl-2'>Sign In With Google</span></button>
                             <p className="text-md mt-2 text-center">Already Registered? <u><Link to='/login'>Please Login</Link></u></p>
                         </div>
                     </div>

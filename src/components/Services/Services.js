@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Services = () => {
+    const services = useLoaderData();
+    console.log(services);
+    const [user, setUser] = useState({})
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setUser(data))
+    }, [])
     return (
         <div className='w-10/12 m-auto'>
-            <h1 className="text-3xl font-semibold text-center my-8">MY SPECIALTIES</h1>
+            <h1 className="text-3xl font-semibold text-center my-8">MY SPECIALTIES{user.length}</h1>
             <div className='grid lg:grid-cols-3 gap-4 mb-8'>
                 <div className="card bg-base-100 shadow-2xl">
                     <figure className="px-10 pt-10">
