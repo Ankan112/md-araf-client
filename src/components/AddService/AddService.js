@@ -1,9 +1,10 @@
 import React from 'react';
 import toast from 'react-hot-toast';
+import useTitle from '../../hooks/useTitle';
 import add from '../../img/add.svg'
 
 const AddService = () => {
-
+    useTitle('Add Service')
     const handleAddService = e => {
         e.preventDefault();
         const form = e.target;

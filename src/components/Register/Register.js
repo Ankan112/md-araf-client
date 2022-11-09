@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider } from "firebase/auth";
+import useTitle from '../../hooks/useTitle';
 
 const provider = new GoogleAuthProvider();
 
@@ -13,6 +14,7 @@ const Register = () => {
     const { user, googleSignIn, createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Register')
     const from = location.state?.from?.pathname || '/';
     console.log(user)
     const handleRegister = e => {

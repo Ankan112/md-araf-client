@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const Services = () => {
     const data = useLoaderData();
+    useTitle('Services')
     // console.log(services);
     // const [user, setUser] = useState({})
     // useEffect(() => {
