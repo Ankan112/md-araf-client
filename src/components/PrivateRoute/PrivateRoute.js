@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <div>Loading...</div>
+        return <h1 className='text-2xl font-semibold text-center my-6'>Loading...</h1>
     }
 
     if (user && user.uid) {

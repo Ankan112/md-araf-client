@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { AuthContext } from '../Context/UserContext';
@@ -103,31 +103,37 @@ const Service = () => {
             </div>
             <div>
                 <h1 className="text-3xl font-semibold text-center my-8">Add Reviews</h1>
-                <div className='flex justify-center w-full'>
-                    <form onSubmit={handleReview} className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text">Service Name</span>
-                        </label>
-                        <input type="text" name='name' readOnly defaultValue={data.ServiceName} placeholder="Name" className="input input-bordered w-full max-w-xs" />
-                        <label className="label">
-                            <span className="label-text">Customer Name</span>
-                        </label>
-                        <input type="text" name='customerName' readOnly defaultValue={user.displayName} placeholder="Customer Name" className="input input-bordered w-full max-w-xs" />
-                        <label className="label">
-                            <span className="label-text">Photo URL</span>
-                        </label>
-                        <input type="text" name='url' defaultValue={user.photoURL} placeholder="URL" className="input input-bordered w-full max-w-xs" />
-                        <label className="label">
-                            <span className="label-text">Ratings</span>
-                        </label>
-                        <input type="text" name='rating' placeholder="Rating" className="input input-bordered w-full max-w-xs" />
-                        <label className="label">
-                            <span className="label-text">Description</span>
-                        </label>
-                        <textarea name='description' className="textarea textarea-bordered min-h-16" placeholder="Service Description"></textarea>
-                        <button type='submit' className="btn my-4">Add Review</button>
-                    </form>
-                </div>
+                {
+                    user?.uid ?
+                        <div className='flex justify-center w-full'>
+                            <form onSubmit={handleReview} className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Service Name</span>
+                                </label>
+                                <input type="text" name='name' readOnly defaultValue={data.ServiceName} placeholder="Name" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    <span className="label-text">Customer Name</span>
+                                </label>
+                                <input type="text" name='customerName' readOnly defaultValue={user.displayName} placeholder="Customer Name" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" name='url' defaultValue={user.photoURL} placeholder="URL" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    <span className="label-text">Ratings</span>
+                                </label>
+                                <input type="text" name='rating' placeholder="Rating" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    <span className="label-text">Description</span>
+                                </label>
+                                <textarea name='description' className="textarea textarea-bordered min-h-16" placeholder="Service Description"></textarea>
+                                <button type='submit' className="btn my-4">Add Review</button>
+                            </form>
+                        </div>
+                        :
+                        <h1 className='text-4xl mb-10 font-semibold text-center'><u><Link to='/login'>Please login to add a review</Link></u></h1>
+                }
+
             </div>
         </div>
     );
