@@ -4,6 +4,7 @@ import Blog from "../components/Blog/Blog";
 import Home from "../components/Home/Home/Home";
 import Login from "../components/Login/Login";
 import MyReview from "../components/MyReview/MyReview";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Register from "../components/Register/Register";
 import Service from "../components/Service/Service";
 import Services from "../components/Services/Services";
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services/:id',
-                element: <Service></Service>,
+                element: <PrivateRoute><Service></Service></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
