@@ -16,8 +16,15 @@ const NavBar = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/services'>Services</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
-                        <li><Link>Item 1</Link></li>
-                        <li><Link>Item 3</Link></li>
+                        {
+                            user && user.uid ?
+                                <>
+                                    <li><Link to='/addservice'>Add Service</Link></li>
+                                    <li><Link to='/review'>My Review</Link></li>
+                                </>
+                                :
+                                <></>
+                        }
                     </ul>
                 </div>
                 <button className="btn btn-ghost normal-case text-xl">Md Araf</button>
