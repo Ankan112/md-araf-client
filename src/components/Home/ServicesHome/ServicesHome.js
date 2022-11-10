@@ -16,7 +16,7 @@ const ServicesHome = () => {
                 {
                     service.map(service => <div key={service._id} className="card bg-base-100 shadow-2xl">
                         <figure className="px-10 pt-10">
-                            <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
+                            <img src={service.img} alt="Shoes" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">{service.ServiceName}</h2>

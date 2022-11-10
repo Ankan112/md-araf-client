@@ -38,6 +38,14 @@ const Gallery = () => {
                     <img className="mask mask-square m-4" src={img8} alt='' />
                 </div>
 
+                {/* https://i.ibb.co/kKPcDwH/pexels-chan-walrus-958545.jpg food
+                https://i.ibb.co/hKMCTzd/pexels-cottonbro-studio-8942300.jpg drink
+                https://i.ibb.co/bdpBbS7/pexels-cup-of-couple-8014834.jpg  brith
+                https://i.ibb.co/3MZy9W3/pexels-farddin-protik-2106463-1.jpg  wedding
+                https://i.ibb.co/rMtQP36/pexels-pixabay-458976.jpg  animal
+                https://i.ibb.co/n05HRK0/pexels-tembela-bohle-1884583.jpg fashion
+                https://i.ibb.co/vV1gj9z/pexels-the-glorious-studio-10030285.jpg jwellery */}
+
 
             </div>
         </div>

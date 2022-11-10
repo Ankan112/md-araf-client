@@ -46,9 +46,9 @@ const Service = () => {
             <div className="hero  min-h-screen bg-base-200">
                 <div className="hero-content lg:w-10/12 m-auto flex-col lg:flex-row">
                     <PhotoProvider>
-                        <PhotoView src="https://placeimg.com/160/160/arch">
+                        <PhotoView src={data.img}>
                             {/* <img src="/1-thumbnail.jpg" alt="" /> */}
-                            <img className="mask mask-squircle h-80 w-80" alt='' src="https://placeimg.com/160/160/arch" />
+                            <img className="mask mask-squircle h-80 w-80" alt='' src={data.img} />
                         </PhotoView>
                     </PhotoProvider>
                     <div className='lg:ml-10 lg:w-1/2'>
