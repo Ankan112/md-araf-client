@@ -28,17 +28,17 @@ const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
-                loader: () => fetch('http://localhost:5000/allservices')
+                loader: () => fetch('https://assignment-11-server-wheat.vercel.app/allservices')
             },
             {
                 path: '/services/:id',
                 element: <Service></Service>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-wheat.vercel.app/services/${params.id}`)
             },
             {
                 path: '/updatereview/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-wheat.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/login',

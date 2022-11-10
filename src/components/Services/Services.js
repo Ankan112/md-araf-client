@@ -8,7 +8,7 @@ const Services = () => {
     // console.log(services);
     // const [user, setUser] = useState({})
     // useEffect(() => {
-    //     fetch('http://localhost:5000/services')
+    //     fetch('https://assignment-11-server-wheat.vercel.app/services')
     //         .then(res => res.json())
     //         .then(data => setUser(data))
     // }, [])

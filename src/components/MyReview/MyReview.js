@@ -12,7 +12,7 @@ const MyReview = () => {
     const [remainingReview, setRemainingReview] = useState(reviews)
     console.log(remainingReview)
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(`https://assignment-11-server-wheat.vercel.app/review?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
@@ -26,7 +26,7 @@ const MyReview = () => {
         const agree = window.confirm(`Are You Sure you want to delete`)
 
         if (agree) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://assignment-11-server-wheat.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

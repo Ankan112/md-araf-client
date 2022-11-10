@@ -16,7 +16,7 @@ const AddService = () => {
         const newService = { ServiceName: ServiceName, img: img, price: price, rating: rating, description: description }
         form.reset();
         console.log(newService)
-        fetch('http://localhost:5000/service', {
+        fetch('https://assignment-11-server-wheat.vercel.app/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

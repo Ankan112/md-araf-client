@@ -10,7 +10,7 @@ const Service = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${data._id}`)
+        fetch(`https://assignment-11-server-wheat.vercel.app/review/${data._id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [data._id])
@@ -26,7 +26,7 @@ const Service = () => {
         const review = { name: name, customerName: customerName, photoURL: url, rating: rating, description: description, uid: data._id, email: user.email }
         console.log(review)
         form.reset();
-        fetch('http://localhost:5000/review', {
+        fetch('https://assignment-11-server-wheat.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

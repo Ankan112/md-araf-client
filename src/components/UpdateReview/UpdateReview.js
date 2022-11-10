@@ -12,7 +12,7 @@ const UpdateReview = () => {
         const description = e.target.description.value;
         const newReview = { name, description }
         console.log(newReview)
-        fetch(`http://localhost:5000/reviews/${data._id}`, {
+        fetch(`https://assignment-11-server-wheat.vercel.app/reviews/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
