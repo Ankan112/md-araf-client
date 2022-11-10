@@ -4,6 +4,7 @@ import Blog from "../components/Blog/Blog";
 import Home from "../components/Home/Home/Home";
 import Login from "../components/Login/Login";
 import MyReview from "../components/MyReview/MyReview";
+import NotFound from "../components/NotFound/NotFound";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Register from "../components/Register/Register";
 import Service from "../components/Service/Service";
@@ -58,5 +59,9 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '*',
+        element: <NotFound></NotFound>
+    }
 ]);
 export default router;
