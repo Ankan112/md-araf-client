@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const ServicesHome = () => {
@@ -16,7 +17,11 @@ const ServicesHome = () => {
                 {
                     service.map(service => <div key={service._id} className="card bg-base-100 shadow-2xl">
                         <figure className="px-10 pt-10">
-                            <img src={service.img} alt="Shoes" className="rounded-xl" />
+                            <PhotoProvider>
+                                <PhotoView src={service.img}>
+                                    <img src={service.img} alt="Shoes" className="rounded-xl" />
+                                </PhotoView>
+                            </PhotoProvider>
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">{service.ServiceName}</h2>
