@@ -2,6 +2,7 @@ import React from 'react';
 import useTitle from '../../../hooks/useTitle';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
+import Gallery from '../Gallery/Gallery';
 import ServicesHome from '../ServicesHome/ServicesHome';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <ServicesHome></ServicesHome>
             <About></About>
+            <Gallery></Gallery>
         </div>
     );
 };
