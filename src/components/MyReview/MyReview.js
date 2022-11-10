@@ -5,17 +5,26 @@ import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../Context/UserContext';
 
 const MyReview = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     useTitle('Review')
     const [reviews, setReviews] = useState([])
     const [remainingReview, setRemainingReview] = useState(reviews)
     console.log(remainingReview)
     useEffect(() => {
-        fetch(`https://assignment-11-server-wheat.vercel.app/review?email=${user?.email}`)
-            .then(res => res.json())
+        fetch(`https://assignment-11-server-wheat.vercel.app/review?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut()
+                }
+                return res.json()
+            })
             .then(data => setReviews(data))
-    }, [user?.email])
+    }, [user?.email, logOut])
     console.log(reviews)
 
     // if (loading) {
@@ -23,7 +32,7 @@ const MyReview = () => {
     // }
 
     const handleDelete = (id) => {
-        const agree = window.confirm(`Are You Sure you want to delete`)
+        const agree = window.confirm(`Are You Sure you want to delete this review?`)
 
         if (agree) {
             fetch(`https://assignment-11-server-wheat.vercel.app/review/${id}`, {

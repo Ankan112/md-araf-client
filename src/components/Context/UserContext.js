@@ -29,6 +29,7 @@ const UserContext = ({ children }) => {
     }
     const logOut = () => {
         setLoading(true);
+        localStorage.removeItem('tokem')
         return signOut(auth)
     }
     useEffect(() => {
