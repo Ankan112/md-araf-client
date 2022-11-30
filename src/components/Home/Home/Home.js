@@ -1,7 +1,9 @@
 import React from 'react';
 import useTitle from '../../../hooks/useTitle';
+import Review from '../../Review/Review';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
+import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import ServicesHome from '../ServicesHome/ServicesHome';
 
@@ -13,6 +15,8 @@ const Home = () => {
             <ServicesHome></ServicesHome>
             <About></About>
             <Gallery></Gallery>
+            <Review></Review>
+            <Contact></Contact>
         </div>
     );
 };
