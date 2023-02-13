@@ -17,7 +17,7 @@ const SingleBlog = ({ blog, setModalInfo }) => {
                 <p class="mt-2 text-gray-500 dark:text-gray-400">
                     {blog.description.substring(0, 200) + "..."}
                 </p>
-                <label htmlFor="my-modal-4" onClick={() => (setModalInfo(blog))} class="inline-block text-blue-500 underline hover:text-blue-400">Read more</label>
+                <label htmlFor="my-modal-4" onClick={() => (setModalInfo(blog))} class="inline-block text-blue-500 underline cursor-pointer hover:text-blue-400">Read more</label>
 
             </div>
         </div>

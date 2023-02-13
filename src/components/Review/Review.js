@@ -7,18 +7,10 @@ const Review = () => {
                 <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">
                     What our <span class="text-blue-500 ">clients</span> say
                 </h1>
-
-                {/* <p class="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error
-                    alias, adipisci rem similique, at omnis eligendi optio eos harum.
-                </p> */}
-
                 <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
                     <div class="p-8 border rounded-lg dark:border-gray-700">
                         <p class="leading-loose text-gray-500 dark:text-gray-400">
-                            “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                            tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                            aperiam dolorum, obcaecati corrupti aspernatur a.”.
+                            I recently hired Md Araf for a family photo shoot and I couldn't be happier with the results! He was professional, friendly, and made the whole experience enjoyable for everyone involved. He had a great eye for capturing the perfect shot and took the time to make sure we were all comfortable and relaxed.
                         </p>
 
                         <div class="flex items-center mt-8 -mx-2">
@@ -33,9 +25,7 @@ const Review = () => {
 
                     <div class="p-8 border rounded-lg dark:border-gray-700">
                         <p class="leading-loose text-gray-500 dark:text-gray-400">
-                            “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                            tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                            aperiam dolorum, obcaecati corrupti aspernatur a.”.
+                            I was so impressed with Md Araf from start to finish! He listened to my vision for the shoot and went above and beyond to make it a reality. His creativity, attention to detail, and technical skills really showed in the final images.I was blown away by how beautiful the photos turned out.
                         </p>
 
                         <div class="flex items-center mt-8 -mx-2">
@@ -43,16 +33,14 @@ const Review = () => {
 
                             <div class="mx-2">
                                 <h1 class="font-semibold text-gray-800 dark:text-white">Jeny Doe</h1>
-                                <span class="text-sm text-gray-500">CEO, Jeny Consultency</span>
+                                <span class="text-sm text-gray-500">Manager, Khan Consultency</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="p-8 border rounded-lg dark:border-gray-700">
                         <p class="leading-loose text-gray-500 dark:text-gray-400">
-                            “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                            tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                            aperiam dolorum, obcaecati corrupti aspernatur a.”.
+                            Working with Md Araf was such a wonderful experience! He was so friendly and easy to work with, and he made the whole photo shoot so much fun. His talent and passion for photography really shines through in his work, and I was so impressed by the quality of the images.
                         </p>
 
                         <div class="flex items-center mt-8 -mx-2">
